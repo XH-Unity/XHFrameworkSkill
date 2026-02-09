@@ -1,0 +1,64 @@
+root = true
+
+[*.cs]
+
+# ========== 微软C#风格命名规则 ==========
+
+# 1. 私有实例字段：_camelCase
+dotnet_naming_rule.instance_private_fields.severity = suggestion
+dotnet_naming_symbols.instance_private_fields.applicable_kinds = field
+dotnet_naming_symbols.instance_private_fields.applicable_accessibilities = private
+dotnet_naming_style.instance_private_style.capitalization = camel_case
+dotnet_naming_style.instance_private_style.required_prefix = _
+dotnet_naming_rule.instance_private_fields.symbols = instance_private_fields
+dotnet_naming_rule.instance_private_fields.style = instance_private_style
+
+# 2. 私有静态字段：s_camelCase
+dotnet_naming_rule.static_private_fields.severity = suggestion
+dotnet_naming_symbols.static_private_fields.applicable_kinds = field
+dotnet_naming_symbols.static_private_fields.applicable_accessibilities = private
+dotnet_naming_symbols.static_private_fields.required_modifiers = static
+dotnet_naming_style.static_private_style.capitalization = camel_case
+dotnet_naming_style.static_private_style.required_prefix = s_
+dotnet_naming_rule.static_private_fields.symbols = static_private_fields
+dotnet_naming_rule.static_private_fields.style = static_private_style
+
+# 3. 线程静态字段：t_camelCase
+dotnet_naming_rule.thread_static_fields.severity = suggestion
+dotnet_naming_symbols.thread_static_fields.applicable_kinds = field
+dotnet_naming_symbols.thread_static_fields.applicable_accessibilities = private
+dotnet_naming_symbols.thread_static_fields.required_modifiers = static
+dotnet_naming_style.thread_static_style.capitalization = camel_case
+dotnet_naming_style.thread_static_style.required_prefix = t_
+dotnet_naming_rule.thread_static_fields.symbols = thread_static_fields
+dotnet_naming_rule.thread_static_fields.style = thread_static_style
+
+# 4. 公共成员：PascalCase
+dotnet_naming_rule.public_members.severity = suggestion
+dotnet_naming_symbols.public_members.applicable_kinds = property,method,event,class,struct,interface,enum,delegate
+dotnet_naming_symbols.public_members.applicable_accessibilities = public,protected,internal,protected_internal
+dotnet_naming_style.public_member_style.capitalization = pascal_case
+dotnet_naming_rule.public_members.symbols = public_members
+dotnet_naming_rule.public_members.style = public_member_style
+
+# 5. 常量：PascalCase
+dotnet_naming_rule.constants.severity = suggestion
+dotnet_naming_symbols.constants.applicable_kinds = field
+dotnet_naming_symbols.constants.required_modifiers = const
+dotnet_naming_style.constant_style.capitalization = pascal_case
+dotnet_naming_rule.constants.symbols = constants
+dotnet_naming_rule.constants.style = constant_style
+
+# 6. 局部变量：camelCase
+dotnet_naming_rule.local_variables.severity = suggestion
+dotnet_naming_symbols.local_variables.applicable_kinds = local
+dotnet_naming_style.local_variable_style.capitalization = camel_case
+dotnet_naming_rule.local_variables.symbols = local_variables
+dotnet_naming_rule.local_variables.style = local_variable_style
+
+# 7. 参数：camelCase
+dotnet_naming_rule.parameters.severity = suggestion
+dotnet_naming_symbols.parameters.applicable_kinds = parameter
+dotnet_naming_style.parameter_style.capitalization = camel_case
+dotnet_naming_rule.parameters.symbols = parameters
+dotnet_naming_rule.parameters.style = parameter_style

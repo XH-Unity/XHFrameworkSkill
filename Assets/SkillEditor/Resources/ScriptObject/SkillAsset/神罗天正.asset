@@ -1,0 +1,291 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2abec0374da61478151f6b840fbb7a, type: 3}
+  m_Name: "\u795E\u7F57\u5929\u6B63"
+  m_EditorClassIdentifier: 
+  nodes:
+  - rid: 4684207772497084419
+  - rid: 4684207772497084431
+  - rid: 4684207772497084417
+  - rid: 4684207772497084418
+  - rid: 4684207772497084416
+  - rid: 4684207772497084420
+  - rid: 4684207789798588420
+  - rid: 4684207772497084421
+  connections:
+  - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+    outputPortName: "\u52A8\u753B"
+    inputNodeGuid: 432ff1e3-b18d-476d-af80-d39ddc07402a
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+    outputPortName: "\u51B7\u5374"
+    inputNodeGuid: c28fb88d-51b1-47b2-be59-859e0ac638e3
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+    outputPortName: "\u6D88\u8017"
+    inputNodeGuid: 9d6f459d-b588-4b64-843b-1b71e8f299ae
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 432ff1e3-b18d-476d-af80-d39ddc07402a
+    outputPortName: f41c85e0-7f26-494e-9ffc-4a06c980f811
+    inputNodeGuid: f73ba91e-a76b-456c-b19c-a5176809d5f5
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 432ff1e3-b18d-476d-af80-d39ddc07402a
+    outputPortName: de0ba361-3aba-4ef0-bb07-9b418fcae591
+    inputNodeGuid: e33ab94c-1496-4d6a-ba5e-1afd38bb0c30
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 432ff1e3-b18d-476d-af80-d39ddc07402a
+    outputPortName: 8dea1941-c520-4f9a-aee0-40932c8542ef
+    inputNodeGuid: cde57fb8-b693-4da8-a4a8-fd61e56c5dcd
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: e33ab94c-1496-4d6a-ba5e-1afd38bb0c30
+    outputPortName: "\u5BF9\u6BCF\u4E2A\u76EE\u6807"
+    inputNodeGuid: 091ecddb-f80b-4c00-aa06-f9bc718618d2
+    inputPortName: "\u8F93\u5165"
+  references:
+    version: 2
+    RefIds:
+    - rid: 4684207772497084416
+      type: {class: AbilityNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+        nodeType: 0
+        position: {x: -878.4, y: -1853.6}
+        targetType: 1
+        skillId: 1006
+        assetTags:
+          _tags: []
+        cancelAbilitiesWithTags:
+          _tags: []
+        blockAbilitiesWithTags:
+          _tags: []
+        activationOwnedTags:
+          _tags: []
+        activationRequiredTags:
+          _tags: []
+        activationBlockedTags:
+          _tags:
+          - _name: "CD.\u56DE\u8840"
+            _hashCode: 1163914435
+            _shortName: "\u56DE\u8840"
+            _ancestorHashCodes: aba22dbc
+            _ancestorNames:
+            - CD
+        ongoingBlockedTags:
+          _tags: []
+        eventOutputPorts: []
+    - rid: 4684207772497084417
+      type: {class: AnimationNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 432ff1e3-b18d-476d-af80-d39ddc07402a
+        nodeType: 20
+        position: {x: -502.4, y: -2384}
+        targetType: 1
+        skeletonDataAsset: {fileID: 11400000, guid: 4fa037b3a2d54ba46a5bbed3faf26323,
+          type: 2}
+        animationName: Skill_attack_1009
+        animationDuration: 25
+        isAnimationLooping: 0
+        timeEffects:
+        - triggerTime: 4
+          portId: de0ba361-3aba-4ef0-bb07-9b418fcae591
+        - triggerTime: 25
+          portId: f41c85e0-7f26-494e-9ffc-4a06c980f811
+        timeCues:
+        - startTime: 0
+          endTime: 75
+          portId: 8dea1941-c520-4f9a-aee0-40932c8542ef
+    - rid: 4684207772497084418
+      type: {class: ParticleCueNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: cde57fb8-b693-4da8-a4a8-fd61e56c5dcd
+        nodeType: 12
+        position: {x: 677.6, y: -1998.4}
+        targetType: 1
+        requiredTags:
+          _tags: []
+        immunityTags:
+          _tags: []
+        destroyWithNode: 0
+        positionSource: 0
+        particlePrefab: {fileID: 3338625181417467303, guid: 422fb7f3ee7a2b844afff2b4a294ce2f,
+          type: 3}
+        particleBindingName: down
+        particleOffset: {x: 0, y: 0, z: 0}
+        particleScale: {x: 1, y: 1, z: 1}
+        attachToTarget: 0
+        particleLoop: 0
+    - rid: 4684207772497084419
+      type: {class: CostEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 9d6f459d-b588-4b64-843b-1b71e8f299ae
+        nodeType: 3
+        position: {x: -1186.4, y: -2011.2}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags: []
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 0
+        duration: 0
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers:
+        - attrType: 100
+          operation: 0
+          magnitudeSourceType: 0
+          fixedValue: 10
+          formula: 
+          mmcType: 0
+          setByCallerKey: 
+          mmcCaptureAttribute: 200
+          mmcAttributeSource: 0
+          mmcCoefficient: 1
+          mmcUseSnapshot: 1
+        stackType: 0
+        stackLimit: 0
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 1
+    - rid: 4684207772497084420
+      type: {class: CooldownEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: c28fb88d-51b1-47b2-be59-859e0ac638e3
+        nodeType: 10
+        position: {x: -1186.4, y: -1747.2}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags:
+          - _name: "CD.\u795E\u7F57\u5929\u6B63"
+            _hashCode: 810112138
+            _shortName: "\u795E\u7F57\u5929\u6B63"
+            _ancestorHashCodes: aba22dbc
+            _ancestorNames:
+            - CD
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 1
+        duration: 5
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers: []
+        stackType: 0
+        stackLimit: 0
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 0
+        cooldownType: 0
+        maxCharges: 2
+        chargeTime: 10
+    - rid: 4684207772497084421
+      type: {class: SearchTargetTaskNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: e33ab94c-1496-4d6a-ba5e-1afd38bb0c30
+        nodeType: 4
+        position: {x: -452, y: -1786.4}
+        targetType: 1
+        searchShapeType: 0
+        searchLineType: 0
+        positionSource: 0
+        positionBindingName: center
+        searchCircleRadius: 4
+        searchSectorRadius: 2
+        searchSectorAngle: 180
+        searchLineDirectionOffsetAngle: 0
+        searchLineDirectionWidth: 1
+        searchLineDirectionLength: 10
+        lineStartPositionSource: 0
+        lineStartBindingName: 
+        lineEndPositionSource: 1
+        lineEndBindingName: 
+        searchLineBetweenWidth: 1
+        searchLineAbsoluteAngle: 0
+        searchLineAbsoluteWidth: 1
+        searchLineAbsoluteLength: 10
+        maxTargets: 999
+        searchTargetTags:
+          _tags:
+          - _name: unitType.boss
+            _hashCode: -2067207703
+            _shortName: boss
+            _ancestorHashCodes: 6c74655f
+            _ancestorNames:
+            - unitType
+        searchExcludeTags:
+          _tags: []
+    - rid: 4684207772497084431
+      type: {class: EndAbilityTaskNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: f73ba91e-a76b-456c-b19c-a5176809d5f5
+        nodeType: 7
+        position: {x: 700, y: -1856.8}
+        targetType: 1
+        endType: 0
+    - rid: 4684207789798588420
+      type: {class: DisplaceEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 091ecddb-f80b-4c00-aa06-f9bc718618d2
+        nodeType: 22
+        position: {x: -93.600006, y: -1708.8}
+        targetType: 0
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags: []
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 1
+        duration: 0.5
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers: []
+        stackType: 0
+        stackLimit: 0
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 0
+        displaceType: 1
+        speed: 10
+        distance: 3
+        minDistance: 0.5
+        pointSource: 0
+        pointBindingName: 

@@ -1,0 +1,259 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2abec0374da61478151f6b840fbb7a, type: 3}
+  m_Name: "\u56DE\u8840"
+  m_EditorClassIdentifier: 
+  nodes:
+  - rid: 4684207772497084419
+  - rid: 4684207789798588423
+  - rid: 4684207772497084429
+  - rid: 4684207772497084420
+  - rid: 4684207772497084416
+  - rid: 4684207772497084418
+  - rid: 4684207789798588424
+  connections:
+  - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+    outputPortName: "\u51B7\u5374"
+    inputNodeGuid: c28fb88d-51b1-47b2-be59-859e0ac638e3
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+    outputPortName: "\u6D88\u8017"
+    inputNodeGuid: 9d6f459d-b588-4b64-843b-1b71e8f299ae
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+    outputPortName: "\u6FC0\u6D3B"
+    inputNodeGuid: 5fb21a71-2fff-4477-b79b-4c1a8bc10f9a
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 5fb21a71-2fff-4477-b79b-4c1a8bc10f9a
+    outputPortName: "\u521D\u59CB\u6548\u679C"
+    inputNodeGuid: cde57fb8-b693-4da8-a4a8-fd61e56c5dcd
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 5fb21a71-2fff-4477-b79b-4c1a8bc10f9a
+    outputPortName: "\u5B8C\u6210\u6548\u679C"
+    inputNodeGuid: 011aad56-e96c-41eb-9d85-e793d74a40bb
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 5fb21a71-2fff-4477-b79b-4c1a8bc10f9a
+    outputPortName: "\u5B8C\u6210\u6548\u679C"
+    inputNodeGuid: becb4d53-8a9e-4dc0-95a3-618d1e79ecc7
+    inputPortName: "\u8F93\u5165"
+  references:
+    version: 2
+    RefIds:
+    - rid: 4684207772497084416
+      type: {class: AbilityNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+        nodeType: 0
+        position: {x: -902.4, y: -1844}
+        targetType: 1
+        skillId: 1008
+        assetTags:
+          _tags: []
+        cancelAbilitiesWithTags:
+          _tags: []
+        blockAbilitiesWithTags:
+          _tags: []
+        activationOwnedTags:
+          _tags: []
+        activationRequiredTags:
+          _tags: []
+        activationBlockedTags:
+          _tags:
+          - _name: "CD.\u56DE\u8840"
+            _hashCode: 1163914435
+            _shortName: "\u56DE\u8840"
+            _ancestorHashCodes: aba22dbc
+            _ancestorNames:
+            - CD
+        ongoingBlockedTags:
+          _tags: []
+        eventOutputPorts: []
+    - rid: 4684207772497084418
+      type: {class: ParticleCueNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: cde57fb8-b693-4da8-a4a8-fd61e56c5dcd
+        nodeType: 12
+        position: {x: -304, y: -2072}
+        targetType: 1
+        requiredTags:
+          _tags: []
+        immunityTags:
+          _tags: []
+        destroyWithNode: 0
+        positionSource: 0
+        particlePrefab: {fileID: 3966591633886693288, guid: 876bc2ad5530efd4881e54e3550d1f48,
+          type: 3}
+        particleBindingName: down
+        particleOffset: {x: 0, y: 0, z: 0}
+        particleScale: {x: 1, y: 1, z: 1}
+        attachToTarget: 0
+        particleLoop: 0
+    - rid: 4684207772497084419
+      type: {class: CostEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 9d6f459d-b588-4b64-843b-1b71e8f299ae
+        nodeType: 3
+        position: {x: -1186.4, y: -2019.2}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags: []
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 0
+        duration: 0
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers:
+        - attrType: 100
+          operation: 0
+          magnitudeSourceType: 0
+          fixedValue: 10
+          formula: 
+          mmcType: 0
+          setByCallerKey: 
+          mmcCaptureAttribute: 200
+          mmcAttributeSource: 0
+          mmcCoefficient: 1
+          mmcUseSnapshot: 1
+        stackType: 0
+        stackLimit: 0
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 1
+    - rid: 4684207772497084420
+      type: {class: CooldownEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: c28fb88d-51b1-47b2-be59-859e0ac638e3
+        nodeType: 10
+        position: {x: -1223.2, y: -1826.4}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags:
+          - _name: "CD.\u56DE\u8840"
+            _hashCode: 1163914435
+            _shortName: "\u56DE\u8840"
+            _ancestorHashCodes: aba22dbc
+            _ancestorNames:
+            - CD
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 1
+        duration: 3
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers: []
+        stackType: 0
+        stackLimit: 0
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 0
+        cooldownType: 0
+        maxCharges: 2
+        chargeTime: 10
+    - rid: 4684207772497084429
+      type: {class: EndAbilityTaskNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 011aad56-e96c-41eb-9d85-e793d74a40bb
+        nodeType: 7
+        position: {x: -333.6, y: -1780}
+        targetType: 1
+        endType: 0
+    - rid: 4684207789798588423
+      type: {class: HealEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 5fb21a71-2fff-4477-b79b-4c1a8bc10f9a
+        nodeType: 2
+        position: {x: -571.2, y: -1987.2}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags: []
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 0
+        duration: 0
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers: []
+        stackType: 0
+        stackLimit: 0
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 0
+        healSourceType: 0
+        healFixedValue: 10
+        healFormula: 
+        healMMCType: 0
+        healSetByCallerKey: 
+        healMMCCaptureAttribute: 202
+        healMMCAttributeSource: 0
+        healMMCCoefficient: 1
+        healMMCUseSnapshot: 1
+        healMultiplyByStackCount: 0
+        healCalculationType: 0
+    - rid: 4684207789798588424
+      type: {class: FloatingTextCueNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: becb4d53-8a9e-4dc0-95a3-618d1e79ecc7
+        nodeType: 14
+        position: {x: -313.6, y: -1951.2}
+        targetType: 1
+        requiredTags:
+          _tags: []
+        immunityTags:
+          _tags: []
+        destroyWithNode: 0
+        positionSource: 2
+        positionBindingName: head
+        textType: 1
+        fixedText: 
+        contextDataKey: Heal
+        textColor: {r: 0, g: 1, b: 0.10971928, a: 1}
+        criticalColor: {r: 1, g: 0.5, b: 0, a: 1}
+        missColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+        fontSize: 45
+        criticalFontSize: 60
+        duration: 1.5
+        offset: {x: 0, y: 0}
+        moveDirection: {x: 0, y: 1}

@@ -1,0 +1,125 @@
+
+SP_Xiyiguai.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+20250416-105859
+  rotate: true
+  xy: 354, 35
+  size: 91, 39
+  orig: 93, 39
+  offset: 1, 0
+  index: -1
+biyan
+  rotate: true
+  xy: 395, 45
+  size: 81, 47
+  orig: 83, 49
+  offset: 1, 1
+  index: -1
+jiao
+  rotate: false
+  xy: 614, 79
+  size: 38, 47
+  orig: 38, 47
+  offset: 0, 0
+  index: -1
+jiao1
+  rotate: false
+  xy: 643, 38
+  size: 34, 39
+  orig: 34, 39
+  offset: 0, 0
+  index: -1
+kouqiang
+  rotate: true
+  xy: 2, 4
+  size: 122, 38
+  orig: 124, 40
+  offset: 1, 1
+  index: -1
+qi1
+  rotate: true
+  xy: 318, 17
+  size: 109, 34
+  orig: 109, 34
+  offset: 0, 0
+  index: -1
+qi2
+  rotate: true
+  xy: 569, 75
+  size: 51, 43
+  orig: 51, 43
+  offset: 0, 0
+  index: -1
+qi3
+  rotate: true
+  xy: 496, 63
+  size: 63, 35
+  orig: 63, 35
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: true
+  xy: 42, 11
+  size: 115, 102
+  orig: 115, 102
+  offset: 0, 0
+  index: -1
+shou
+  rotate: true
+  xy: 434, 4
+  size: 39, 56
+  orig: 39, 56
+  offset: 0, 0
+  index: -1
+shou1
+  rotate: false
+  xy: 533, 70
+  size: 34, 56
+  orig: 34, 58
+  offset: 0, 2
+  index: -1
+tou
+  rotate: false
+  xy: 146, 14
+  size: 170, 112
+  orig: 184, 114
+  offset: 1, 1
+  index: -1
+tui
+  rotate: false
+  xy: 389, 7
+  size: 43, 26
+  orig: 45, 28
+  offset: 1, 1
+  index: -1
+tui1
+  rotate: false
+  xy: 643, 2
+  size: 32, 34
+  orig: 34, 36
+  offset: 1, 1
+  index: -1
+weiba
+  rotate: true
+  xy: 444, 51
+  size: 75, 50
+  orig: 75, 50
+  offset: 0, 0
+  index: -1
+yachi
+  rotate: true
+  xy: 354, 3
+  size: 30, 33
+  orig: 32, 35
+  offset: 1, 1
+  index: -1
+zui
+  rotate: false
+  xy: 492, 2
+  size: 149, 47
+  orig: 149, 47
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,210 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2712d50f1a34d7443b852f2516036979, type: 3}
+  m_Name: GameplayTagsAsset
+  m_EditorClassIdentifier: 
+  _treeNodes:
+  - name: Root
+    id: 0
+    parentId: -1
+    childrenIds: 300000004400000049000000
+  - name: unitType
+    id: 48
+    parentId: 0
+    childrenIds: 3100000032000000
+  - name: hero
+    id: 49
+    parentId: 48
+    childrenIds: 
+  - name: boss
+    id: 50
+    parentId: 48
+    childrenIds: 
+  - name: DeBuff
+    id: 54
+    parentId: 73
+    childrenIds: 370000004a000000
+  - name: Stun
+    id: 55
+    parentId: 54
+    childrenIds: 
+  - name: CD
+    id: 68
+    parentId: 0
+    childrenIds: 450000004600000047000000480000004b0000004c0000004d0000004e0000004f0000005000000051000000
+  - name: "\u6A2A\u626B"
+    id: 69
+    parentId: 68
+    childrenIds: 
+  - name: "\u6D41\u8840"
+    id: 70
+    parentId: 68
+    childrenIds: 
+  - name: "\u706B\u7403\u672F"
+    id: 71
+    parentId: 68
+    childrenIds: 
+  - name: "\u8DF5\u8E0F"
+    id: 72
+    parentId: 68
+    childrenIds: 
+  - name: Buff
+    id: 73
+    parentId: 0
+    childrenIds: 36000000
+  - name: Dot
+    id: 74
+    parentId: 54
+    childrenIds: 
+  - name: "\u65CB\u98CE\u65A9"
+    id: 75
+    parentId: 68
+    childrenIds: 
+  - name: "\u56DE\u8840"
+    id: 76
+    parentId: 68
+    childrenIds: 
+  - name: "\u4E07\u8C61\u5929\u5F15"
+    id: 77
+    parentId: 68
+    childrenIds: 
+  - name: "\u795E\u7F57\u5929\u6B63"
+    id: 78
+    parentId: 68
+    childrenIds: 
+  - name: "\u88AB\u52A8\u56DE\u8840"
+    id: 79
+    parentId: 68
+    childrenIds: 
+  - name: "\u4E09\u706B\u7403"
+    id: 80
+    parentId: 68
+    childrenIds: 
+  - name: "\u6025\u901F"
+    id: 81
+    parentId: 68
+    childrenIds: 
+  _cachedTags:
+  - _name: Buff
+    _hashCode: 937056111
+    _shortName: Buff
+    _ancestorHashCodes: 
+    _ancestorNames: []
+  - _name: Buff.DeBuff
+    _hashCode: 321157895
+    _shortName: DeBuff
+    _ancestorHashCodes: 6f57da37
+    _ancestorNames:
+    - Buff
+  - _name: Buff.DeBuff.Dot
+    _hashCode: -637848644
+    _shortName: Dot
+    _ancestorHashCodes: 6f57da37077b2413
+    _ancestorNames:
+    - Buff
+    - Buff.DeBuff
+  - _name: Buff.DeBuff.Stun
+    _hashCode: 1791562953
+    _shortName: Stun
+    _ancestorHashCodes: 6f57da37077b2413
+    _ancestorNames:
+    - Buff
+    - Buff.DeBuff
+  - _name: CD
+    _hashCode: -1137859925
+    _shortName: CD
+    _ancestorHashCodes: 
+    _ancestorNames: []
+  - _name: "CD.\u4E07\u8C61\u5929\u5F15"
+    _hashCode: -531853721
+    _shortName: "\u4E07\u8C61\u5929\u5F15"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: "CD.\u4E09\u706B\u7403"
+    _hashCode: -1656226246
+    _shortName: "\u4E09\u706B\u7403"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: "CD.\u56DE\u8840"
+    _hashCode: 1163914435
+    _shortName: "\u56DE\u8840"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: "CD.\u6025\u901F"
+    _hashCode: -605747253
+    _shortName: "\u6025\u901F"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: "CD.\u65CB\u98CE\u65A9"
+    _hashCode: 1979572373
+    _shortName: "\u65CB\u98CE\u65A9"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: "CD.\u6A2A\u626B"
+    _hashCode: 2090173402
+    _shortName: "\u6A2A\u626B"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: "CD.\u6D41\u8840"
+    _hashCode: -1868013560
+    _shortName: "\u6D41\u8840"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: "CD.\u706B\u7403\u672F"
+    _hashCode: -1710429436
+    _shortName: "\u706B\u7403\u672F"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: "CD.\u795E\u7F57\u5929\u6B63"
+    _hashCode: 810112138
+    _shortName: "\u795E\u7F57\u5929\u6B63"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: "CD.\u88AB\u52A8\u56DE\u8840"
+    _hashCode: -1099994396
+    _shortName: "\u88AB\u52A8\u56DE\u8840"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: "CD.\u8DF5\u8E0F"
+    _hashCode: -1394424629
+    _shortName: "\u8DF5\u8E0F"
+    _ancestorHashCodes: aba22dbc
+    _ancestorNames:
+    - CD
+  - _name: unitType
+    _hashCode: 1600484460
+    _shortName: unitType
+    _ancestorHashCodes: 
+    _ancestorNames: []
+  - _name: unitType.boss
+    _hashCode: -2067207703
+    _shortName: boss
+    _ancestorHashCodes: 6c74655f
+    _ancestorNames:
+    - unitType
+  - _name: unitType.hero
+    _hashCode: 1831381558
+    _shortName: hero
+    _ancestorHashCodes: 6c74655f
+    _ancestorNames:
+    - unitType
+  _nextId: 82

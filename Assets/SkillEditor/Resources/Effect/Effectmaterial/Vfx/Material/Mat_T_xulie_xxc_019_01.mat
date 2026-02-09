@@ -1,0 +1,269 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mat_T_xulie_xxc_019_01
+  m_Shader: {fileID: 4800000, guid: 7d7b39986ce40e541896c3a8c5bc63e8, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _ADDITIONALTEXTOGGLE_ON
+  - _DISSOLVETOGGLE_ON
+  - _FRESNELTOGGLE_ON
+  - _GRADEDTEXTOGGLE_ON
+  - _MAIN_SPLIT_A
+  - _MASKTOGGLE_ON
+  - _MASK_SPLIT_R
+  - _NOISETOGGLE_ON
+  - _USE_DEPTH_FADE_OFF
+  - _VERTEXTOGGLE_ON
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AdditionalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Dissolove_tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Dissolvegradent:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Gradent_tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_tex:
+        m_Texture: {fileID: 2800000, guid: 5c1d95f529c60384785e695a60506cf2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise_tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Vertex_tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex4coord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex4coord3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - GradedTexToggle: 1
+    - _AddBlend: 10
+    - _AdditionalTexToggle: 1
+    - _Additional_speed_U: 0
+    - _Additional_speed_V: 0
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _ColorMask: 15
+    - _Cull: 2
+    - _Cull_Mode: 0
+    - _Custom: 0
+    - _Cutoff: 0.5
+    - _DegreeOfFusion: 0.248
+    - _Depth: 2
+    - _Depth_fade: 0
+    - _Desatruate: 0
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _Dissolve: 0
+    - _DissolveToggle: 1
+    - _Dissolve_Rotator: 0
+    - _Dissolve_edge: 0
+    - _Dissolve_gradent_Rotator: 0
+    - _Dissolve_soft: 0.71
+    - _Dissolve_speed_U: 0
+    - _Dissolve_speed_V: 0
+    - _Dissolve_tex_radial: 0
+    - _Dissove_tex_clamp: 0
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
+    - _EnvironmentReflections: 1
+    - _FixedPower1: 0.5
+    - _FresnelToggle: 1
+    - _Fresnel_one_minus: 0
+    - _Fresnelpower: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Gradent_Rotator: 0
+    - _Gradent_speed_U: 0
+    - _Gradent_speed_V: 0
+    - _Gradent_tex_radial: 0
+    - _Main_Rotator: 0
+    - _Main_Split: 3
+    - _Main_screen_UV: 0
+    - _Main_speed_U: 0
+    - _Main_speed_V: 0
+    - _Main_tex_clamp: 0
+    - _Main_tex_radial: 0
+    - _MaskToggle: 1
+    - _Mask_Rotator: 0
+    - _Mask_Split: 0
+    - _Mask_speed_U: 0
+    - _Mask_speed_V: 0
+    - _Mask_tex_clamp: 0
+    - _Mask_tex_radial: 0
+    - _Metallic: 0
+    - _NoiseToggle: 1
+    - _Noise_Rotator: 0
+    - _Noise_scale: 0
+    - _Noise_speed_U: 0
+    - _Noise_speed_V: 0
+    - _Noise_tex_radial: 0
+    - _OcclusionStrength: 1
+    - _Opacity_power: 1
+    - _Opacity_scale: 1
+    - _Parallax: 0.005
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _Surface: 0
+    - _Use_Depth_fade: 0
+    - _Use_base_color: 1
+    - _Use_dissolve_gradent: 0
+    - _Use_fresnel_color: 0
+    - _Use_fresnel_opacity: 0
+    - _VertexToggle: 1
+    - _Vertex_Rotator: 0
+    - _Vertex_scale: 0
+    - _Vertex_speed_U: 0
+    - _Vertex_speed_V: 0
+    - _Vertex_tex_radial: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    - _ZWrite0: 0
+    - __dirty: 1
+    m_Colors:
+    - _Additional_Tex: {r: 1, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DegreeOfFusionColor: {r: 0.4594162, g: 2.4782786, b: 3.3584902, a: 1}
+    - _Dissolve_Tex: {r: 1, g: 1, b: 0, a: 0}
+    - _Dissolve_color: {r: 0, g: 0, b: 0, a: 0}
+    - _Dissolve_gradent_Tex: {r: 1, g: 1, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Fresnel_color: {r: 0, g: 0, b: 0, a: 0}
+    - _GradedColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Gradent_Tex: {r: 1, g: 1, b: 0, a: 0}
+    - _Main_Tex: {r: 1, g: 1, b: 0, a: 0}
+    - _Main_color: {r: 1.1353015, g: 1.1353015, b: 1.1353015, a: 1}
+    - _Mask_Tex: {r: 1, g: 1, b: 0, a: 0}
+    - _Noise_Tex: {r: 1, g: 1, b: 0, a: 0}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _Vertex_Tex: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &1148205142405340262
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

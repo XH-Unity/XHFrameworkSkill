@@ -1,0 +1,102 @@
+# Unity 自动生成目录 - 必须忽略
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# 项目特定生成目录
+/[Hh]ybridCLRData/
+/[Bb]undles/
+/[Yy]oo/
+/Assets/StreamingAssets/
+/XFrameworkTool/
+/XFrameworkOut/
+/.claude/
+/.idea/
+/.vscode/
+
+# 其他临时/缓存文件
+.utmp/
+
+# 日志文件
+*.log
+
+# Blender 备份文件
+*.blend1
+*.blend1.meta
+
+# 内存捕获和录制文件
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# IDE/编辑器生成文件/项目设置文件
+/[Aa]ssets/Plugins/Editor/JetBrains*
+*.DotSettings.user
+*.csproj
+*.csproj.DotSettings
+*.sln
+*.sln.DotSettings.user
+ExportedObj/
+.consulo/
+*.unityproj
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Visual Studio 缓存
+.vs/
+
+# Gradle 缓存
+.gradle/
+
+# Unity3D项目设置备份文件
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity 崩溃报告
+sysinfo.txt
+mono_crash.*
+
+# 构建产物
+*.apk
+*.aab
+*.unitypackage
+*.unitypackage.meta
+*.app
+
+# Crashlytics generated file
+crashlytics-build.properties
+
+# TestRunner generated files
+InitTestScene*.unity*
+
+# Addressables default ignores, before user customizations
+/ServerData
+/[Aa]ssets/StreamingAssets/aa*
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/Addressables_Temp*
+# By default, Addressables content builds will generate addressables_content_state.bin
+# files in platform-specific subfolders, for example:
+# /Assets/AddressableAssetsData/OSX/addressables_content_state.bin
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+
+# Visual Scripting auto-generated files
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
+# Auto-generated scenes by play mode tests
+/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*

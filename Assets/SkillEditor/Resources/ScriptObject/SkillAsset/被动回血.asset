@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2abec0374da61478151f6b840fbb7a, type: 3}
+  m_Name: "\u88AB\u52A8\u56DE\u8840"
+  m_EditorClassIdentifier: 
+  nodes:
+  - rid: 4684207789798588426
+  - rid: 4684207789798588427
+  - rid: 4684207789798588425
+  - rid: 4684207789798588429
+  - rid: 4684207789798588428
+  connections:
+  - outputNodeGuid: 426755b7-c39a-4524-9cb5-960a31a19c10
+    outputPortName: "\u6BCF\u5468\u671F\u6267\u884C"
+    inputNodeGuid: a8c2d6c0-65f1-4bed-8a6a-70197e84bb56
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: a8c2d6c0-65f1-4bed-8a6a-70197e84bb56
+    outputPortName: "\u5B8C\u6210\u6548\u679C"
+    inputNodeGuid: d086a8c9-8557-4a61-8fd2-64b3c1e543a3
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: d5809887-df6e-4604-bd09-36cef191ce83
+    outputPortName: "\u6FC0\u6D3B"
+    inputNodeGuid: 426755b7-c39a-4524-9cb5-960a31a19c10
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 7eefd9ae-c57e-439d-b1b6-e7f4e52f2f6f
+    outputPortName: "\u5B8C\u6210\u6548\u679C"
+    inputNodeGuid: 426755b7-c39a-4524-9cb5-960a31a19c10
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: d5809887-df6e-4604-bd09-36cef191ce83
+    outputPortName: "\u53D7\u5230\u4F24\u5BB3\u65F6"
+    inputNodeGuid: 7eefd9ae-c57e-439d-b1b6-e7f4e52f2f6f
+    inputPortName: "\u8F93\u5165"
+  references:
+    version: 2
+    RefIds:
+    - rid: 4684207789798588425
+      type: {class: AbilityNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: d5809887-df6e-4604-bd09-36cef191ce83
+        nodeType: 0
+        position: {x: 210.4, y: 114.399994}
+        targetType: 1
+        skillId: 1009
+        assetTags:
+          _tags: []
+        cancelAbilitiesWithTags:
+          _tags: []
+        blockAbilitiesWithTags:
+          _tags: []
+        activationOwnedTags:
+          _tags: []
+        activationRequiredTags:
+          _tags: []
+        activationBlockedTags:
+          _tags: []
+        ongoingBlockedTags:
+          _tags: []
+        eventOutputPorts:
+        - eventType: 2
+          customEventTag: 
+    - rid: 4684207789798588426
+      type: {class: HealEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: a8c2d6c0-65f1-4bed-8a6a-70197e84bb56
+        nodeType: 2
+        position: {x: 933.6, y: 226.4}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags: []
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 0
+        duration: 0
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers: []
+        stackType: 0
+        stackLimit: 0
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 0
+        healSourceType: 0
+        healFixedValue: 2
+        healFormula: 
+        healMMCType: 0
+        healSetByCallerKey: 
+        healMMCCaptureAttribute: 202
+        healMMCAttributeSource: 0
+        healMMCCoefficient: 1
+        healMMCUseSnapshot: 1
+        healMultiplyByStackCount: 0
+        healCalculationType: 0
+    - rid: 4684207789798588427
+      type: {class: FloatingTextCueNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: d086a8c9-8557-4a61-8fd2-64b3c1e543a3
+        nodeType: 14
+        position: {x: 1148.8, y: 208}
+        targetType: 1
+        requiredTags:
+          _tags: []
+        immunityTags:
+          _tags: []
+        destroyWithNode: 0
+        positionSource: 0
+        positionBindingName: head
+        textType: 1
+        fixedText: 
+        contextDataKey: Heal
+        textColor: {r: 0.040635824, g: 1, b: 0, a: 1}
+        criticalColor: {r: 1, g: 0.5, b: 0, a: 1}
+        missColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+        fontSize: 45
+        criticalFontSize: 60
+        duration: 1.5
+        offset: {x: 0, y: 0}
+        moveDirection: {x: 0, y: 1}
+    - rid: 4684207789798588428
+      type: {class: BuffEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 426755b7-c39a-4524-9cb5-960a31a19c10
+        nodeType: 11
+        position: {x: 587.2, y: 114.399994}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags: []
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 2
+        duration: 10
+        isPeriodic: 1
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers: []
+        stackType: 1
+        stackLimit: 1
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags:
+          - _name: "CD.\u88AB\u52A8\u56DE\u8840"
+            _hashCode: -1099994396
+            _shortName: "\u88AB\u52A8\u56DE\u8840"
+            _ancestorHashCodes: aba22dbc
+            _ancestorNames:
+            - CD
+        cancelOnAbilityEnd: 1
+        buffId: 0
+    - rid: 4684207789798588429
+      type: {class: CooldownEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 7eefd9ae-c57e-439d-b1b6-e7f4e52f2f6f
+        nodeType: 10
+        position: {x: 370.40002, y: 484.8}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags:
+          - _name: "CD.\u88AB\u52A8\u56DE\u8840"
+            _hashCode: -1099994396
+            _shortName: "\u88AB\u52A8\u56DE\u8840"
+            _ancestorHashCodes: aba22dbc
+            _ancestorNames:
+            - CD
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 1
+        duration: 3
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers: []
+        stackType: 0
+        stackLimit: 0
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 0
+        cooldownType: 0
+        maxCharges: 2
+        chargeTime: 10
