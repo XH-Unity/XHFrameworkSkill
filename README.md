@@ -2,7 +2,7 @@
 
 ## 🎯 <span style="color: red; font-size: 22px; font-weight: bold;">QQ交流群：621790749</span>
 
-# XHFrameworkSkill - Unity技能框架与编辑器  
+# XHFrameworkSkill - Unity GAS技能框架与技能节点编辑器  
 ![alt text](./images/image36.png)  
 ### 编辑器概览    
 ![alt text](./images/image-2.png)
