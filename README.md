@@ -5,7 +5,7 @@
 # XHFrameworkSkill - Unity技能框架与编辑器
 
 ### 编辑器概览  
-![alt text](./images/image-2.png)  
+![alt text](./images/image36.png)  
 ![alt text](./images/image-2.png)
 
 ## 📖 目录
