@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.esotericsoftware.spine.spine-unity": {
-      "version": "https://gitee.com/packagemirror/spine3.8.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "6846dbe0017180ddfabf8e97830e41a1761c1340"
-    },
     "com.unity.burst": {
       "version": "1.8.21",
       "depth": 1,

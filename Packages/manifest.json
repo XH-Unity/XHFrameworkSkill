@@ -1,6 +1,5 @@
 {
   "dependencies": {
-     "com.esotericsoftware.spine.spine-unity":"https://gitee.com/packagemirror/spine3.8.git",
     "com.unity.collab-proxy": "2.11.2",
     "com.unity.ide.rider": "3.0.36",
     "com.unity.ide.visualstudio": "2.0.22",
