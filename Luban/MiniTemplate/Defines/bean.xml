@@ -1,0 +1,56 @@
+<module >
+<bean name="Int2"  sep="_">
+	<var name="Item1" type="int"/>
+	<var name="Item2" type="int"/>
+	<mapper target="client" codeTarget="cs-bin">
+            <option name="type" value="(int,int)"/>
+            <option name="constructor" value="Luban.ExternalTypeUtil.NewInt2"/>
+    </mapper>
+</bean>
+
+
+
+
+
+<bean name="Int3"  sep="_">
+
+	<var name="Item1" type="int"/>
+	<var name="Item2" type="int"/>
+	<var name="Item3" type="int"/>
+
+</bean>
+<bean name="Int4"  sep="_">
+
+	<var name="Item1" type="int"/>
+	<var name="Item2" type="int"/>
+	<var name="Item3" type="int"/>
+	<var name="Item4" type="int"/>
+
+</bean>
+<bean name="StringFloat"  sep=",">
+
+	<var name="Item1" type="string"/>
+	<var name="Item2" type="float"/>
+
+</bean>
+<bean name="Float2" sep="_">
+	<var name="Item1" type="float"/>
+	<var name="Item2" type="float"/>
+	<mapper target="client" codeTarget="cs-bin">
+            <option name="type" value="(float,float)"/>
+            <option name="constructor" value="Luban.ExternalTypeUtil.NewFloat2"/>
+    </mapper>
+</bean>
+
+<bean name="Vector2Int" sep=",">
+    <var name="x" type="int"/>
+    <var name="y" type="int"/>
+    <mapper target="client" codeTarget="cs-bin">
+        <option name="type" value="UnityEngine.Vector2Int"/>
+        <option name="constructor" value="ExternalTypeUtil.NewVector2Int"/>
+    </mapper>
+</bean>
+</module>
+
+
+

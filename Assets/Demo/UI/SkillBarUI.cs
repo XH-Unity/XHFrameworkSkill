@@ -18,7 +18,6 @@ public class SkillBarUI : MonoBehaviour
     [Tooltip("技能槽父物体")]
     public Transform slotContainer;
 
-    // 运行时技能槽数据
     private List<SkillSlotUI> _skillSlots = new List<SkillSlotUI>();
 
     void Start()
@@ -27,48 +26,52 @@ public class SkillBarUI : MonoBehaviour
         CreateSkillSlots();
     }
 
-    /// <summary>
-    /// 创建技能槽UI
-    /// </summary>
     private void CreateSkillSlots()
     {
         if (skillSlotPrefab == null || slotContainer == null || player == null) return;
 
-        var tbSkill = LubanManager.Instance.Tables.TbSkill;
+        var tables = LubanManager.Instance.Tables;
+        var heroData = tables.TbHero.GetOrDefault(player.id);
+        if (heroData == null) return;
 
-        foreach (var skillId in player.skillIds)
+        var tbSkill = tables.TbSkill;
+
+        foreach (var skillId in heroData.ActiveSkill)
         {
-            var skillData = tbSkill.GetOrDefault(skillId);
-            if (skillData == null) continue;
+            CreateSlot(skillId, tbSkill);
+        }
 
-            // 从Resources加载图标
-            Sprite icon = Resources.Load<Sprite>(skillData.IconPath);
-
-            // 实例化预制体
-            GameObject slotObj = Instantiate(skillSlotPrefab, slotContainer);
-            slotObj.gameObject.SetActive(true);
-            var slotUI = slotObj.GetComponent<SkillSlotUI>();
-
-            if (slotUI == null)
-            {
-                slotUI = slotObj.AddComponent<SkillSlotUI>();
-            }
-
-            // 初始化
-            slotUI.Initialize(skillId, skillData.Name, icon, this);
-            _skillSlots.Add(slotUI);
-
-            // 从player的ASC中查找已授予的技能Spec
-            if (player.ownerASC != null)
-            {
-                slotUI.AbilitySpec = player.ownerASC.Abilities.FindAbilityById(skillId);
-            }
+        foreach (var skillId in heroData.PassiveSkill)
+        {
+            CreateSlot(skillId, tbSkill);
         }
     }
 
-    /// <summary>
-    /// 尝试激活技能
-    /// </summary>
+    private void CreateSlot(int skillId, cfg.TbSkill tbSkill)
+    {
+        var skillData = tbSkill.GetOrDefault(skillId);
+        if (skillData == null) return;
+
+        Sprite icon = Resources.Load<Sprite>(skillData.IconPath);
+
+        GameObject slotObj = Instantiate(skillSlotPrefab, slotContainer);
+        slotObj.gameObject.SetActive(true);
+        var slotUI = slotObj.GetComponent<SkillSlotUI>();
+
+        if (slotUI == null)
+        {
+            slotUI = slotObj.AddComponent<SkillSlotUI>();
+        }
+
+        slotUI.Initialize(skillId, skillData.Name, icon, this);
+        _skillSlots.Add(slotUI);
+
+        if (player.ownerASC != null)
+        {
+            slotUI.AbilitySpec = player.ownerASC.Abilities.FindAbilityById(skillId);
+        }
+    }
+
     public bool TryActivateSkill(SkillSlotUI slot)
     {
         if (player?.ownerASC == null || slot.AbilitySpec == null) return false;

@@ -1,70 +1,90 @@
-using System.Collections;
 using System.Collections.Generic;
 using SkillEditor.Data;
 using SkillEditor.Runtime;
 using UnityEngine;
 
+public enum UnitType
+{
+    Hero,
+    Monster,
+}
+
 public class Unit : MonoBehaviour
 {
     public AbilitySystemComponent ownerASC;
 
-    [Header("技能配置")]
-    [Tooltip("从Luban技能表读取的技能ID列表")]
-    public List<int> skillIds = new List<int>();
+    [Header("单位配置")]
+    public int id;
+
+    public virtual UnitType Type => UnitType.Hero;
 
     protected virtual void Awake()
     {
         ownerASC = new AbilitySystemComponent(this.gameObject);
 
-        // 生命相关属性
-        if (!ownerASC.Attributes.HasAttribute(AttrType.Health))
-            ownerASC.Attributes.AddAttribute(AttrType.Health, 1000000f);
-        if (!ownerASC.Attributes.HasAttribute(AttrType.MaxHealth))
-            ownerASC.Attributes.AddAttribute(AttrType.MaxHealth, 1000000f);
-        if (!ownerASC.Attributes.HasAttribute(AttrType.HealthRegen))
-            ownerASC.Attributes.AddAttribute(AttrType.HealthRegen, 1f);
+        UnitManager.Instance.Register(this);
 
-        // 法力相关属性
-        if (!ownerASC.Attributes.HasAttribute(AttrType.Mana))
-            ownerASC.Attributes.AddAttribute(AttrType.Mana, 1000000f);
-        if (!ownerASC.Attributes.HasAttribute(AttrType.MaxMana))
-            ownerASC.Attributes.AddAttribute(AttrType.MaxMana, 1000000f);
-        if (!ownerASC.Attributes.HasAttribute(AttrType.ManaRegen))
-            ownerASC.Attributes.AddAttribute(AttrType.ManaRegen, 1f);
-
-        // 战斗属性
-        if (!ownerASC.Attributes.HasAttribute(AttrType.Attack))
-            ownerASC.Attributes.AddAttribute(AttrType.Attack, 20f);
-        if (!ownerASC.Attributes.HasAttribute(AttrType.Defense))
-            ownerASC.Attributes.AddAttribute(AttrType.Defense, 10f);
-        if (!ownerASC.Attributes.HasAttribute(AttrType.MagicPower))
-            ownerASC.Attributes.AddAttribute(AttrType.MagicPower, 15f);
-        if (!ownerASC.Attributes.HasAttribute(AttrType.MagicDefense))
-            ownerASC.Attributes.AddAttribute(AttrType.MagicDefense, 10f);
-
-        // 速度相关属性
-        if (!ownerASC.Attributes.HasAttribute(AttrType.MoveSpeed))
-            ownerASC.Attributes.AddAttribute(AttrType.MoveSpeed, 5f);
-        if (!ownerASC.Attributes.HasAttribute(AttrType.AttackSpeed))
-            ownerASC.Attributes.AddAttribute(AttrType.AttackSpeed, 1f);
-        if (!ownerASC.Attributes.HasAttribute(AttrType.CooldownReduction))
-            ownerASC.Attributes.AddAttribute(AttrType.CooldownReduction, 0f);
-
-        // 暴击相关属性
-        if (!ownerASC.Attributes.HasAttribute(AttrType.CritRate))
-            ownerASC.Attributes.AddAttribute(AttrType.CritRate, 0.05f);
-        if (!ownerASC.Attributes.HasAttribute(AttrType.CritDamage))
-            ownerASC.Attributes.AddAttribute(AttrType.CritDamage, 1.5f);
-
-        // 根据技能ID列表从Luban表自动授予技能
-        GrantAbilitiesFromTable();
+        InitFromTable();
     }
 
-    /// <summary>
-    /// 从Luban技能表读取数据并自动授予技能
-    /// </summary>
-    protected void GrantAbilitiesFromTable()
+    protected virtual void OnDestroy()
     {
+        UnitManager.Instance.Unregister(this);
+    }
+
+    private void InitFromTable()
+    {
+        var tables = LubanManager.Instance.Tables;
+        (int, int)[] attributes = null;
+        int[] activeSkills = null;
+        int[] passiveSkills = null;
+
+        if (Type == UnitType.Hero)
+        {
+            var data = tables.TbHero.GetOrDefault(id);
+            if (data == null)
+            {
+                Debug.LogWarning($"[Unit] TbHero中找不到ID: {id}");
+                return;
+            }
+            attributes = data.InitialAttribute;
+            activeSkills = data.ActiveSkill;
+            passiveSkills = data.PassiveSkill;
+        }
+        else
+        {
+            var data = tables.TbMonster.GetOrDefault(id);
+            if (data == null)
+            {
+                Debug.LogWarning($"[Unit] TbMonster中找不到ID: {id}");
+                return;
+            }
+            attributes = data.InitialAttribute;
+            activeSkills = data.ActiveSkill;
+            passiveSkills = data.PassiveSkill;
+        }
+
+        InitAttributes(attributes);
+        GrantSkills(activeSkills);
+        GrantSkills(passiveSkills);
+    }
+
+    private void InitAttributes((int, int)[] attributes)
+    {
+        if (attributes == null) return;
+
+        foreach (var (typeId, value) in attributes)
+        {
+            var attrType = (AttrType)typeId;
+            if (!ownerASC.Attributes.HasAttribute(attrType))
+                ownerASC.Attributes.AddAttribute(attrType, value);
+        }
+    }
+
+    private void GrantSkills(int[] skillIds)
+    {
+        if (skillIds == null) return;
+
         var tbSkill = LubanManager.Instance.Tables.TbSkill;
         foreach (var skillId in skillIds)
         {

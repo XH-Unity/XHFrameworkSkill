@@ -25,7 +25,7 @@ MonoBehaviour:
     id: 49
     parentId: 48
     childrenIds: 
-  - name: boss
+  - name: monster
     id: 50
     parentId: 48
     childrenIds: 
@@ -195,15 +195,15 @@ MonoBehaviour:
     _shortName: unitType
     _ancestorHashCodes: 
     _ancestorNames: []
-  - _name: unitType.boss
-    _hashCode: -2067207703
-    _shortName: boss
-    _ancestorHashCodes: 6c74655f
-    _ancestorNames:
-    - unitType
   - _name: unitType.hero
     _hashCode: 1831381558
     _shortName: hero
+    _ancestorHashCodes: 6c74655f
+    _ancestorNames:
+    - unitType
+  - _name: unitType.monster
+    _hashCode: -2021655864
+    _shortName: monster
     _ancestorHashCodes: 6c74655f
     _ancestorNames:
     - unitType

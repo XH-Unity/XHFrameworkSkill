@@ -11,7 +11,7 @@ public class UnitAttributeGUI : MonoBehaviour
 {
     [Header("引用")]
     public Player player;
-    public Boss boss;
+    public Monster monster;
 
     // GUI样式
     private GUIStyle boxStyle;
@@ -41,10 +41,10 @@ public class UnitAttributeGUI : MonoBehaviour
         }
 
         // 绘制Boss属性面板（右侧）
-        if (boss != null && boss.ownerASC != null)
+        if (monster != null && monster.ownerASC != null)
         {
             Rect bossRect = new Rect(Screen.width - PanelWidth - Margin, Margin, PanelWidth, PanelHeight);
-            DrawUnitPanel(bossRect, "Boss 属性", boss.ownerASC, ref bossScrollPos, new Color(0.6f, 0.2f, 0.2f, 0.9f));
+            DrawUnitPanel(bossRect, "Boss 属性", monster.ownerASC, ref bossScrollPos, new Color(0.6f, 0.2f, 0.2f, 0.9f));
         }
     }
 

@@ -1,29 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using SkillEditor.Data;
 using SkillEditor.Runtime;
 using UnityEngine;
 
-public class Boss : Unit
+public class Monster : Unit
 {
     public Unit target;
     public AnimationComponent AnimationComponent;
     private GameplayAbilitySpec _normalAttackSpec;
 
+    public override UnitType Type => UnitType.Monster;
+
     void Start()
     {
-        ownerASC.OwnedTags.AddTag(new GameplayTag("unitType.boss"));
+        ownerASC.OwnedTags.AddTag(new GameplayTag("unitType.monster"));
 
-        // 从基类自动授予的技能中获取普攻Spec（取第一个技能作为普攻）
-        if (skillIds.Count > 0)
+        var monsterData = LubanManager.Instance.Tables.TbMonster.GetOrDefault(id);
+        if (monsterData != null && monsterData.ActiveSkill.Length > 0)
         {
-            _normalAttackSpec = ownerASC.Abilities.FindAbilityById(skillIds[0]);
+            _normalAttackSpec = ownerASC.Abilities.FindAbilityById(monsterData.ActiveSkill[0]);
         }
     }
 
     void Update()
     {
-        // 持续尝试对target释放普攻
         TryNormalAttack();
 
         if (target)
@@ -34,20 +33,14 @@ public class Boss : Unit
         }
     }
 
-    /// <summary>
-    /// 尝试释放普攻
-    /// </summary>
     private void TryNormalAttack()
     {
         if (_normalAttackSpec == null || target == null) return;
 
-        // 如果技能不在运行中 且 不是眩晕状态
         if (!_normalAttackSpec.IsRunning && !AnimationComponent._isStunned)
         {
-            // 尝试激活技能
             bool success = ownerASC.TryActivateAbility(_normalAttackSpec, target.ownerASC);
 
-            // 释放失败（可能是CD中），播放Stand动画
             if (!success)
             {
                 AnimationComponent.PlayAnimation("Stand", true);

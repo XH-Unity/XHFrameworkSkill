@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using SkillEditor.Data;
 using SkillEditor.Runtime;
 using UnityEngine;
@@ -7,6 +5,9 @@ using UnityEngine;
 public class Player : Unit
 {
     public Unit target;
+
+    public override UnitType Type => UnitType.Hero;
+
     void Start()
     {
         ownerASC.OwnedTags.AddTag(new GameplayTag("unitType.hero"));
@@ -42,6 +43,4 @@ public class Player : Unit
             }
         }
     }
-
-  
 }
