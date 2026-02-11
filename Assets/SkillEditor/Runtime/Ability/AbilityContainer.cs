@@ -81,6 +81,19 @@ namespace SkillEditor.Runtime
         }
 
         /// <summary>
+        /// 授予技能并设置技能ID
+        /// </summary>
+        public GameplayAbilitySpec GrantAbility(SkillGraphData graphData, int skillId)
+        {
+            var spec = GrantAbility(graphData);
+            if (spec?.AbilityNodeData != null)
+            {
+                spec.AbilityNodeData.skillId = skillId;
+            }
+            return spec;
+        }
+
+        /// <summary>
         /// 移除技能
         /// </summary>
         public bool RemoveAbility(GameplayAbilitySpec spec)

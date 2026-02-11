@@ -6,8 +6,8 @@ set GEN_CLIENT=../Luban/Luban.dll
       -c cs-bin ^
       -d bin ^
       --conf ./luban.conf ^
-      -x outputDataDir=%WORKSPACE%\Assets\Luban\asset ^
-      -x outputCodeDir=%WORKSPACE%\Assets\Luban\DataTable ^
+      -x outputDataDir=%WORKSPACE%\Assets\Unity\Resources\Luban ^
+      -x outputCodeDir=%WORKSPACE%\Assets\Demo\Luban\DataTable ^
       -x tableImporter.valueTypeNameFormat=Table{0}
 
   pause                              

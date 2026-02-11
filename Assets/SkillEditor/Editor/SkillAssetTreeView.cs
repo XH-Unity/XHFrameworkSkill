@@ -12,7 +12,7 @@ namespace SkillEditor.Editor
 {
     public class SkillAssetTreeView : TreeView
     {
-        private const string RootPath = "Assets/SkillEditor/Resources/ScriptObject/SkillAsset";
+        private const string RootPath = "Assets/Unity/Resources/ScriptObject/SkillAsset";
         public event Action<string> OnFileSelected;
 
         private Dictionary<int, string> idToPathMap = new Dictionary<int, string>();

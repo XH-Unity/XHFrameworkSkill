@@ -1,0 +1,226 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2abec0374da61478151f6b840fbb7a, type: 3}
+  m_Name: "\u6025\u901F"
+  m_EditorClassIdentifier: 
+  nodes:
+  - rid: 4684207772497084419
+  - rid: 4684207772497084431
+  - rid: 4684207772497084417
+  - rid: 4684207772497084420
+  - rid: 4684207772497084416
+  - rid: 4684207789798588433
+  connections:
+  - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+    outputPortName: "\u52A8\u753B"
+    inputNodeGuid: 432ff1e3-b18d-476d-af80-d39ddc07402a
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+    outputPortName: "\u51B7\u5374"
+    inputNodeGuid: c28fb88d-51b1-47b2-be59-859e0ac638e3
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+    outputPortName: "\u6D88\u8017"
+    inputNodeGuid: 9d6f459d-b588-4b64-843b-1b71e8f299ae
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 432ff1e3-b18d-476d-af80-d39ddc07402a
+    outputPortName: f41c85e0-7f26-494e-9ffc-4a06c980f811
+    inputNodeGuid: f73ba91e-a76b-456c-b19c-a5176809d5f5
+    inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+    outputPortName: "\u6FC0\u6D3B"
+    inputNodeGuid: 632c75e2-152b-4376-8e9e-62c0e74f92d0
+    inputPortName: "\u8F93\u5165"
+  references:
+    version: 2
+    RefIds:
+    - rid: 4684207772497084416
+      type: {class: AbilityNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 356907e0-1488-4128-bfcc-7ff73cfc3330
+        nodeType: 0
+        position: {x: -878.4, y: -1853.6}
+        targetType: 1
+        skillId: 0
+        assetTags:
+          _tags: []
+        cancelAbilitiesWithTags:
+          _tags: []
+        blockAbilitiesWithTags:
+          _tags: []
+        activationOwnedTags:
+          _tags: []
+        activationRequiredTags:
+          _tags: []
+        activationBlockedTags:
+          _tags:
+          - _name: "CD.\u6025\u901F"
+            _hashCode: -605747253
+            _shortName: "\u6025\u901F"
+            _ancestorHashCodes: aba22dbc
+            _ancestorNames:
+            - CD
+        ongoingBlockedTags:
+          _tags: []
+        eventOutputPorts: []
+    - rid: 4684207772497084417
+      type: {class: AnimationNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 432ff1e3-b18d-476d-af80-d39ddc07402a
+        nodeType: 20
+        position: {x: -502.4, y: -2384}
+        targetType: 1
+        skeletonDataAsset: {fileID: 11400000, guid: 4fa037b3a2d54ba46a5bbed3faf26323,
+          type: 2}
+        animationName: Skill_attack_1009
+        animationDuration: 25
+        isAnimationLooping: 0
+        timeEffects:
+        - triggerTime: 25
+          portId: f41c85e0-7f26-494e-9ffc-4a06c980f811
+        timeCues: []
+    - rid: 4684207772497084419
+      type: {class: CostEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 9d6f459d-b588-4b64-843b-1b71e8f299ae
+        nodeType: 3
+        position: {x: -1186.4, y: -2011.2}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags: []
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 0
+        duration: 0
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers:
+        - attrType: 100
+          operation: 0
+          magnitudeSourceType: 0
+          fixedValue: 10
+          formula: 
+          mmcType: 0
+          setByCallerKey: 
+          mmcCaptureAttribute: 200
+          mmcAttributeSource: 0
+          mmcCoefficient: 1
+          mmcUseSnapshot: 1
+        stackType: 0
+        stackLimit: 0
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 1
+    - rid: 4684207772497084420
+      type: {class: CooldownEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: c28fb88d-51b1-47b2-be59-859e0ac638e3
+        nodeType: 10
+        position: {x: -1186.4, y: -1747.2}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags:
+          - _name: "CD.\u6025\u901F"
+            _hashCode: -605747253
+            _shortName: "\u6025\u901F"
+            _ancestorHashCodes: aba22dbc
+            _ancestorNames:
+            - CD
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 1
+        duration: 10
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers: []
+        stackType: 0
+        stackLimit: 0
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 0
+        cooldownType: 0
+        maxCharges: 2
+        chargeTime: 10
+    - rid: 4684207772497084431
+      type: {class: EndAbilityTaskNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: f73ba91e-a76b-456c-b19c-a5176809d5f5
+        nodeType: 7
+        position: {x: 700, y: -1856.8}
+        targetType: 1
+        endType: 0
+    - rid: 4684207789798588433
+      type: {class: BuffEffectNodeData, ns: SkillEditor.Data, asm: SkillEditor.Data}
+      data:
+        guid: 632c75e2-152b-4376-8e9e-62c0e74f92d0
+        nodeType: 11
+        position: {x: -514.4, y: -1880}
+        targetType: 1
+        assetTags:
+          _tags: []
+        grantedTags:
+          _tags: []
+        applicationRequiredTags:
+          _tags: []
+        applicationImmunityTags:
+          _tags: []
+        removeGameEffectsWithTags:
+          _tags: []
+        durationType: 1
+        duration: 7
+        isPeriodic: 0
+        period: 1
+        executeOnApplication: 0
+        attributeModifiers:
+        - attrType: 300
+          operation: 0
+          magnitudeSourceType: 0
+          fixedValue: 10
+          formula: 
+          mmcType: 0
+          setByCallerKey: 
+          mmcCaptureAttribute: 200
+          mmcAttributeSource: 0
+          mmcCoefficient: 1
+          mmcUseSnapshot: 1
+        stackType: 2
+        stackLimit: 1
+        stackDurationRefreshPolicy: 0
+        stackPeriodResetPolicy: 0
+        stackExpirationPolicy: 0
+        stackOverflowPolicy: 0
+        ongoingRequiredTags:
+          _tags: []
+        cancelOnAbilityEnd: 0
+        buffId: 0
