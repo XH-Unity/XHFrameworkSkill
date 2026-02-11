@@ -13,14 +13,17 @@ namespace cfg
 {
 public partial class Tables
 {
+    public TbSkill TbSkill {get; }
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
+        TbSkill = new TbSkill(loader("tbskill"));
         ResolveRef();
     }
     
     private void ResolveRef()
     {
+        TbSkill.ResolveRef(this);
     }
 }
 
