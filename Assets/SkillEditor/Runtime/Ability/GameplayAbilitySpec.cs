@@ -631,7 +631,15 @@ namespace SkillEditor.Runtime
                 var effectData = effect.EffectNodeData;
                 if (effectData != null)
                 {
-                    effect.Cancel();
+                    // 通过ASC的EffectContainer移除，确保IsExpired被正确设置
+                    if (effect.Target != null)
+                    {
+                        effect.Target.EffectContainer.RemoveEffect(effect);
+                    }
+                    else
+                    {
+                        effect.Remove();
+                    }
                 }
             }
             _runningEffects.Clear();

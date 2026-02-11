@@ -392,6 +392,8 @@ namespace SkillEditor.Runtime
                 Target.OwnedTags.RemoveTags(Tags.GrantedTags);
 
             SpecExecutor.ExecuteConnectedNodes(SkillId, NodeGuid, "全部移除后", GetExecutionContext());
+
+            IsExpired = true;
         }
 
         // ============ 堆叠 ============

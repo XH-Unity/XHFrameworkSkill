@@ -20,9 +20,9 @@ MonoBehaviour:
   - rid: 4684207772497084417
   - rid: 4684207772497084418
   - rid: 4684207772497084420
-  - rid: 4684207789798588418
-  - rid: 4684207772497084421
   - rid: 4684207772497084431
+  - rid: 4684207772497084421
+  - rid: 4684207789798588418
   connections:
   - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
     outputPortName: "\u52A8\u753B"
@@ -35,10 +35,6 @@ MonoBehaviour:
   - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
     outputPortName: "\u6D88\u8017"
     inputNodeGuid: 9d6f459d-b588-4b64-843b-1b71e8f299ae
-    inputPortName: "\u8F93\u5165"
-  - outputNodeGuid: 432ff1e3-b18d-476d-af80-d39ddc07402a
-    outputPortName: f41c85e0-7f26-494e-9ffc-4a06c980f811
-    inputNodeGuid: f73ba91e-a76b-456c-b19c-a5176809d5f5
     inputPortName: "\u8F93\u5165"
   - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
     outputPortName: "\u6FC0\u6D3B"
@@ -60,6 +56,10 @@ MonoBehaviour:
     outputPortName: 8dea1941-c520-4f9a-aee0-40932c8542ef
     inputNodeGuid: cde57fb8-b693-4da8-a4a8-fd61e56c5dcd
     inputPortName: "\u8F93\u5165"
+  - outputNodeGuid: 432ff1e3-b18d-476d-af80-d39ddc07402a
+    outputPortName: f41c85e0-7f26-494e-9ffc-4a06c980f811
+    inputNodeGuid: f73ba91e-a76b-456c-b19c-a5176809d5f5
+    inputPortName: "\u8F93\u5165"
   references:
     version: 2
     RefIds:
@@ -70,7 +70,7 @@ MonoBehaviour:
         nodeType: 0
         position: {x: -878.4, y: -1853.6}
         targetType: 1
-        skillId: 1005
+        skillId: 1004
         assetTags:
           _tags: []
         cancelAbilitiesWithTags:
@@ -243,9 +243,9 @@ MonoBehaviour:
         maxTargets: 999
         searchTargetTags:
           _tags:
-          - _name: unitType.boss
-            _hashCode: -2067207703
-            _shortName: boss
+          - _name: unitType.monster
+            _hashCode: -2021655864
+            _shortName: monster
             _ancestorHashCodes: 6c74655f
             _ancestorNames:
             - unitType
