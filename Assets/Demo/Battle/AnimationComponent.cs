@@ -17,11 +17,11 @@ namespace SkillEditor.Runtime
         [SerializeField] private AbilitySystemComponent _asc;
          private SkeletonAnimation _animation;
 
-         public bool isPlayer;
         // 缓存的标签
         private string _cachedStunTag="Buff.DeBuff.Stun";
 
         // 当前状态
+        [HideInInspector]
         public bool _isStunned;
 
         
@@ -32,26 +32,6 @@ namespace SkillEditor.Runtime
                 _asc = GetComponent<Unit>().ownerASC;
             if (_animation == null)
                 _animation = GetComponent<SkeletonAnimation>();
-            if (isPlayer)
-            {
-                Skeleton skeleton = _animation.Skeleton;
-                SkeletonData skeletonData = skeleton.Data;
-                Skin characterSkin = new Skin("character-combined");
-                AddSkin(characterSkin, skeletonData.FindSkin($"Cloth/cloth_{1:00}"));
-                AddSkin(characterSkin, skeletonData.FindSkin($"Head/head_{1:00}"));
-                AddSkin(characterSkin, skeletonData.FindSkin($"Weapon/weapon_{1:00}"));
-                AddSkin(characterSkin, skeletonData.FindSkin("jiao"));
-                skeleton.SetSkin(characterSkin);
-                skeleton.SetSlotsToSetupPose();
-            }
-        }
-        
-        void AddSkin(Skin baseSkin, Skin addSkin)
-        {
-            if (addSkin != null)
-            {
-                baseSkin.AddSkin(addSkin);
-            }
         }
 
         private void OnEnable()

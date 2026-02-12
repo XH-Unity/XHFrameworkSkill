@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: SP_Zhanshi_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 68e25c42eda80f9489e79d2dc7b24e82, type: 2}
+  - {fileID: 11400000, guid: c9f3f42542aebbd4785487764becaa4a, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 3ad25b72b56b0394db6359d639f8fd7e, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: ba060dd0a17bef043bd863258d75ff8a, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0
-    applyAdditiveMaterial: 0
+    applyAdditiveMaterial: 1
     additiveMaterials: []
     multiplyMaterials: []
     screenMaterials: []

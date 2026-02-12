@@ -78,7 +78,7 @@ MonoBehaviour:
         nodeType: 0
         position: {x: -878.4, y: -1853.6}
         targetType: 1
-        skillId: 1010
+        skillId: 1008
         assetTags:
           _tags: []
         cancelAbilitiesWithTags:
@@ -107,7 +107,7 @@ MonoBehaviour:
         nodeType: 20
         position: {x: -452, y: -2406.4}
         targetType: 1
-        skeletonDataAsset: {fileID: 11400000, guid: 4fa037b3a2d54ba46a5bbed3faf26323,
+        skeletonDataAsset: {fileID: 11400000, guid: 3754b23f7ac951e42ab7bce09051b229,
           type: 2}
         animationName: Attack_01
         animationDuration: 18

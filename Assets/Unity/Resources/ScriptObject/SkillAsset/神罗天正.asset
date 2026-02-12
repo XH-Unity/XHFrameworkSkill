@@ -15,12 +15,12 @@ MonoBehaviour:
   nodes:
   - rid: 4684207772497084419
   - rid: 4684207772497084431
-  - rid: 4684207772497084417
   - rid: 4684207772497084418
   - rid: 4684207772497084416
   - rid: 4684207772497084420
   - rid: 4684207789798588420
   - rid: 4684207772497084421
+  - rid: 4684207772497084417
   connections:
   - outputNodeGuid: 356907e0-1488-4128-bfcc-7ff73cfc3330
     outputPortName: "\u52A8\u753B"
@@ -89,7 +89,7 @@ MonoBehaviour:
         nodeType: 20
         position: {x: -502.4, y: -2384}
         targetType: 1
-        skeletonDataAsset: {fileID: 11400000, guid: 4fa037b3a2d54ba46a5bbed3faf26323,
+        skeletonDataAsset: {fileID: 11400000, guid: 3754b23f7ac951e42ab7bce09051b229,
           type: 2}
         animationName: Skill_attack_1009
         animationDuration: 25

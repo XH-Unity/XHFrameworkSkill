@@ -25,13 +25,12 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ecfbab4746bdf99408fbffd9fb0fcdba, type: 3}
+        m_Texture: {fileID: 2800000, guid: 812f004172e31764dade4b4377d7a728, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _Cutoff: 0.1
-    - _FillPhase: 0
     - _OutlineMipLevel: 0
     - _OutlineReferenceTexWidth: 1024
     - _OutlineSmoothness: 1
@@ -42,6 +41,5 @@ Material:
     - _ThresholdEnd: 0.25
     - _Use8Neighbourhood: 1
     m_Colors:
-    - _FillColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 1, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []

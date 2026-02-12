@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: "\u6D41\u8840"
   m_EditorClassIdentifier: 
   nodes:
-  - rid: 4684207772497084417
   - rid: 4684207772497084418
   - rid: 4684207772497084419
   - rid: 4684207772497084420
@@ -23,6 +22,7 @@ MonoBehaviour:
   - rid: 4684207772497084423
   - rid: 4684207772497084424
   - rid: 4684207772497084421
+  - rid: 4684207772497084417
   connections:
   - outputNodeGuid: 432ff1e3-b18d-476d-af80-d39ddc07402a
     outputPortName: 8dea1941-c520-4f9a-aee0-40932c8542ef
@@ -99,7 +99,7 @@ MonoBehaviour:
         nodeType: 20
         position: {x: -472, y: -2380.8}
         targetType: 1
-        skeletonDataAsset: {fileID: 11400000, guid: 4fa037b3a2d54ba46a5bbed3faf26323,
+        skeletonDataAsset: {fileID: 11400000, guid: 3754b23f7ac951e42ab7bce09051b229,
           type: 2}
         animationName: Attack_02
         animationDuration: 22
