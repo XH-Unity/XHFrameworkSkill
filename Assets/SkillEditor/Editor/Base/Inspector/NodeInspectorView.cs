@@ -15,6 +15,8 @@ namespace SkillEditor.Editor
         private SkillGraphData graphData;
         private string filePath;
 
+        public event System.Action OnNodeDataModified;
+
         public NodeInspectorView()
         {
             style.width = 300;
@@ -129,8 +131,8 @@ namespace SkillEditor.Editor
         {
             if (currentNode != null)
             {
-                // 重新构建UI
                 UpdateSelection(currentNode);
+                OnNodeDataModified?.Invoke();
             }
         }
 

@@ -13,6 +13,7 @@ namespace SkillEditor.Editor
         private Vector2 pastePosition;
 
         public event Action<SkillNodeBase> OnNodeSelected;
+        public event Action OnGraphModified;
 
         public SkillGraphView()
         {
@@ -92,6 +93,7 @@ namespace SkillEditor.Editor
 
         private GraphViewChange OnGraphViewChanged(GraphViewChange change)
         {
+            // 连线增删、节点删除都触发脏标记
             if (change.elementsToRemove != null)
             {
                 foreach (var element in change.elementsToRemove)
@@ -101,6 +103,17 @@ namespace SkillEditor.Editor
                         OnNodeSelected?.Invoke(null);
                     }
                 }
+                OnGraphModified?.Invoke();
+            }
+
+            if (change.edgesToCreate != null && change.edgesToCreate.Count > 0)
+            {
+                OnGraphModified?.Invoke();
+            }
+
+            if (change.movedElements != null && change.movedElements.Count > 0)
+            {
+                OnGraphModified?.Invoke();
             }
 
             return change;

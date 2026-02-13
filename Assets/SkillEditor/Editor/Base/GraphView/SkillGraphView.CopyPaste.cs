@@ -50,6 +50,7 @@ namespace SkillEditor.Editor
             }
 
             ClearSelection();
+            OnGraphModified?.Invoke();
         }
 
         private bool CanPasteSerializedData(string data)

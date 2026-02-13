@@ -20,6 +20,7 @@ namespace SkillEditor.Editor
         private Button saveButton;
         private Button overviewButton;
         private VisualElement centerPanel;
+        private bool _isGraphDirty = false;
 
         [MenuItem("Tools/Skill Editor")]
         public static void OpenWindow()
@@ -40,6 +41,10 @@ namespace SkillEditor.Editor
 
         private void OnDisable()
         {
+            // 关闭窗口前自动保存
+            if (_isGraphDirty)
+                SaveCurrentGraph();
+
             rootVisualElement.UnregisterCallback<KeyDownEvent>(OnKeyDown, TrickleDown.TrickleDown);
             rootVisualElement.Clear();
         }
@@ -179,16 +184,41 @@ namespace SkillEditor.Editor
         private void SaveCurrentGraph()
         {
             if (currentGraphData == null || string.IsNullOrEmpty(currentFilePath) || graphView == null)
-            {
-                Debug.LogWarning("没有打开的技能文件可以保存");
                 return;
-            }
 
             graphView.SaveGraph(currentGraphData);
             EditorUtility.SetDirty(currentGraphData);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
+
+            _isGraphDirty = false;
+            UpdateSaveButtonStyle();
             Debug.Log($"已保存: {currentFilePath}");
+        }
+
+        private void MarkGraphDirty()
+        {
+            if (_isGraphDirty) return;
+            _isGraphDirty = true;
+            UpdateSaveButtonStyle();
+        }
+
+        private void UpdateSaveButtonStyle()
+        {
+            if (saveButton == null) return;
+
+            if (_isGraphDirty)
+            {
+                saveButton.text = "● 保存 (Ctrl+S)";
+                saveButton.style.backgroundColor = new Color(0.8f, 0.6f, 0.1f, 0.8f);
+                saveButton.style.color = Color.white;
+            }
+            else
+            {
+                saveButton.text = "保存 (Ctrl+S)";
+                saveButton.style.backgroundColor = StyleKeyword.Null;
+                saveButton.style.color = StyleKeyword.Null;
+            }
         }
 
         private VisualElement CreateLeftPanel()
@@ -292,6 +322,7 @@ namespace SkillEditor.Editor
             };
 
             graphView.OnNodeSelected += OnNodeSelected;
+            graphView.OnGraphModified += MarkGraphDirty;
             graphView.SetNodeSelectionCallback();
 
             centerPanel.Add(graphView);
@@ -301,6 +332,7 @@ namespace SkillEditor.Editor
         private VisualElement CreateRightPanel()
         {
             inspectorView = new NodeInspectorView();
+            inspectorView.OnNodeDataModified += MarkGraphDirty;
             inspectorView.style.borderTopLeftRadius = 8;
             inspectorView.style.borderTopRightRadius = 8;
             inspectorView.style.borderBottomLeftRadius = 8;
@@ -320,6 +352,10 @@ namespace SkillEditor.Editor
         {
             if (string.IsNullOrEmpty(path) || !File.Exists(path) || !path.EndsWith(".asset"))
             {
+                // 切换到文件夹或无效路径前，自动保存
+                if (_isGraphDirty)
+                    SaveCurrentGraph();
+
                 graphView.ClearGraph();
                 currentFilePath = null;
                 currentGraphData = null;
@@ -332,6 +368,10 @@ namespace SkillEditor.Editor
             if (path == currentFilePath && currentGraphData != null)
                 return;
 
+            // 切换到其他技能文件前，自动保存当前文件
+            if (_isGraphDirty)
+                SaveCurrentGraph();
+
             currentFilePath = path;
             currentGraphData = AssetDatabase.LoadAssetAtPath<SkillGraphData>(path);
 
@@ -341,6 +381,9 @@ namespace SkillEditor.Editor
                 graphView.LoadGraph(currentGraphData);
                 inspectorView.SetGraphContext(graphView, currentGraphData, currentFilePath);
                 UpdateUIState(true);
+
+                _isGraphDirty = false;
+                UpdateSaveButtonStyle();
 
                 // 延迟执行全览，等待 layout 计算完成
                 ScheduleFrameAllNodes();
