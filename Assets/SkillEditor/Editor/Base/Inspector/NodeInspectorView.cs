@@ -62,10 +62,8 @@ namespace SkillEditor.Editor
             graphData = data;
             filePath = path;
 
-            if (currentInspector != null)
-            {
-                currentInspector.SetContext(view, data, path);
-            }
+            // 切换技能文件时清空属性面板，等用户选择节点后再显示
+            UpdateSelection(null);
         }
 
         public void UpdateSelection(SkillNodeBase node)
